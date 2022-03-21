@@ -1,0 +1,11 @@
+<h1>comments</h1>
+
+<% if @comments.any? %>
+	<% @comments.each do |comment| %>
+		<p>
+			<%= comment.body %>
+		</p>
+	<% end %>
+<% else %>
+	<p>no comments yet. be the first to comment.</p>
+<% end %>
