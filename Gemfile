@@ -31,7 +31,9 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 5.1'
 end
 
-gem "faker", "~> 2.20"
+gem 'faker', '~> 2.20'
