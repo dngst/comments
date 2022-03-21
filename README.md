@@ -1,5 +1,7 @@
 # Comments
 
+[![CI](https://github.com/dngst/comments/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/dngst/comments/actions/workflows/rubyonrails.yml)
+
 > Commentary on anything
 
 ## Requirements
