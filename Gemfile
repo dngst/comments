@@ -33,3 +33,5 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers', '~> 5.1'
 end
+
+gem "faker", "~> 2.20"
