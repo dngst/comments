@@ -1,5 +1,12 @@
 <h1>comments</h1>
 
+<%= form_with model: @comment do |f| %>
+	<div>
+		<%= f.text_field :body %>
+		<span><%= f.submit %></span>
+	</div>
+<% end %>
+
 <% if @comments.any? %>
 	<% @comments.each do |comment| %>
 		<p>
