@@ -33,6 +33,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.active_storage.service = :local
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -49,7 +50,7 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Suppress logger output for asset requests.
-  # config.assets.quiet = true
+  config.assets.quiet = true
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
