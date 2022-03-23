@@ -1,20 +1,12 @@
 <h1>comments</h1>
 
-<%= form_with model: @comment do |f| %>
-	<div>
-		<%= f.text_field :body %>
-		<span><%= f.submit %></span>
-	</div>
-<% end %>
+<p class="notice"><%= notice %></p>
 
-<% if @comments.any? %>
-	<% @comments.each do |comment| %>
-		<p>
-			<%= comment.body %>
-		</p>
-	<% end %>
-<% else %>
-	<p>no comments yet. be the first to comment.</p>
-<% end %>
+<%= render 'comments/form' %>
 
-<%== pagy_nav(@pagy) %>
+<%= turbo_stream_from 'comments' %>
+
+<%= turbo_frame_tag 'comments' do %>
+  <%= render @comments %>
+  <%== pagy_nav(@pagy) %>
+<% end %>
