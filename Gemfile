@@ -13,6 +13,8 @@ gem 'importmap-rails', '~> 1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+gem 'sprockets-rails'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -39,4 +41,4 @@ end
 
 gem 'faker', '~> 2.20'
 
-gem "pagy", "~> 5.10"
+gem 'pagy', '~> 5.10'
