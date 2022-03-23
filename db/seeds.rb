@@ -1,6 +1,6 @@
 require 'faker'
 
-25.times do
+1000.times do
   Comment.create!(
     body: Faker::TvShows::BojackHorseman.quote
   )
