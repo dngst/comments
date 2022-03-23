@@ -1,7 +1,7 @@
 # Comments controller
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.all.reverse_order
+    @pagy, @comments = pagy(Comment.all.reverse_order)
   end
 
   def create
