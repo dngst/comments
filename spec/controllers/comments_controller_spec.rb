@@ -13,17 +13,19 @@ RSpec.describe CommentsController, type: :controller do
     end
   end
 
-  describe 'POST create' do
-    let(:comment_params) do
-      {
-        body: 'fly like a cadillac, sting like a beemer'
-      }
-    end
+  context 'when params are valid' do
+    describe 'POST create' do
+      let(:valid_comment_params) do
+        {
+          body: 'fly like a cadillac, sting like a beemer'
+        }
+      end
 
-    before { Comment.create!(comment_params) }
+      before { Comment.create!(valid_comment_params) }
 
-    it 'creates a comment' do
-      expect(response).to have_http_status(:ok)
+      it 'creates a comment' do
+        expect(response).to have_http_status(:ok)
+      end
     end
   end
 end
