@@ -12,6 +12,7 @@ describe 'the comments page', type: :feature do
       fill_in 'body', with: 'turbo'
       click_button 'Save'
       expect(page).to have_content 'turbo'
+      expect(current_path).to eq(root_path)
     end
 
     it 'shows a comment in lowercase' do
@@ -19,6 +20,7 @@ describe 'the comments page', type: :feature do
       fill_in 'body', with: 'STAY'
       click_button 'Save'
       expect(page).to have_content 'stay'
+      expect(current_path).to eq(root_path)
     end
   end
 
@@ -28,6 +30,7 @@ describe 'the comments page', type: :feature do
       fill_in 'body', with: ''
       click_button 'Save'
       expect(page).to have_content 'Body can\'t be blank'
+      expect(current_path).to eq(root_path)
     end
   end
 end
