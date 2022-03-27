@@ -21,10 +21,11 @@ RSpec.describe CommentsController, type: :controller do
         }
       end
 
-      before { Comment.create!(valid_comment_params) }
+      before { @comment = Comment.create!(valid_comment_params) }
 
       it 'creates a comment' do
         expect(response).to have_http_status(:ok)
+        expect(Comment.last).to eq(@comment)
       end
     end
   end
