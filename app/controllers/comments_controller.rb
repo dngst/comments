@@ -11,7 +11,10 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to root_path }
       else
-        format.html { redirect_to root_path, notice: @comment.errors.full_messages }
+        format.html do
+          redirect_to root_path,
+                      notice: @comment.errors.full_messages.to_sentence
+        end
       end
     end
   end
