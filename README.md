@@ -10,14 +10,13 @@
 - Bundler
 - Ruby on Rails
 - PostgreSQL
+- Redis
 
 ## Install
 
-$ bundle
+$ bin/setup
 
-$ rails db:create && rails db:migrate or $ rails db:setup
-
-$ rails s
+$ bin/dev
 
 http://localhost:3000
 
