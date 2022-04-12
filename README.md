@@ -16,7 +16,7 @@
 
 $ bin/setup
 
-$ bin/dev
+$ rails s
 
 http://localhost:3000
 
