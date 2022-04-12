@@ -5,5 +5,5 @@ class Comment < ApplicationRecord
     self.body = body.downcase
   end
 
-  after_create_commit { broadcast_prepend_to 'comments' }
+  broadcasts_to ->(comment) { 'comments' }, inserts_by: :prepend
 end
