@@ -16,7 +16,7 @@
 
 $ bin/setup
 
-$ rails s
+$ bin/rails s
 
 http://localhost:3000
 
